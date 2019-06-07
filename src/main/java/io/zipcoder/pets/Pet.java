@@ -2,12 +2,13 @@ package io.zipcoder.pets;
 
 public abstract class Pet {
 
-    String name;
+    private String name;
+    String species;
 
-    abstract void speak();
+    abstract String speak();
 
 
-    public String getName() {
+    private String getName() {
         return name;
     }
 
@@ -15,5 +16,13 @@ public abstract class Pet {
         this.name = name;
     }
 
+    public String toString(){
+        return "Your pet named " +
+                this.getName() + " is a " + this.species + ".\n" +
+                initCap(this.name) + " always likes to say: \"" + this.speak() + "\".\n";
+    }
 
+    private String initCap(String input){
+        return Character.toUpperCase(input.charAt(0))+input.substring(1);
+    }
 }
