@@ -1,6 +1,6 @@
 package io.zipcoder.pets;
 
-public abstract class Pet {
+public abstract class Pet{
 
     private String name;
     String species;
